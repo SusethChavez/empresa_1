@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heladería Dulce Nieve</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fdf6e3; /* Fondo vintage beige suave */
+      font-family: 'Georgia', serif;
+      height: 100vh;
+      color: #4b2e2e;
+      padding: 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    header img {
+      width: 200px;
+      height: auto;
+    }
+
+    .barras {
+      display: flex;
+      justify-content: flex-end;
+      margin: 1rem;
+    }
+
+    button {
+      background-color: #d4a373; /* Marrón claro */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .desplegable {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #f3e5d0; /* Beige vintage */
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      padding: 1rem;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 20px 0;
+    }
+
+    .menu a {
+      color: #a0522d;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    main {
+      text-align: center;
+      background-color: #fff8ef; /* Fondo rosado muy claro */
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: auto;
+      margin-top: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #a0522d;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: #6b4c3b;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    section p {
+      margin: 0.5rem 0;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: 1px dashed #d4a373;
+    }
+
+    @media (max-width: 768px) {
+      .desplegable {
+        width: 100%;
+      }
+      main {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909736.png" alt="Logo Heladería" />
+  </header>
+
+  <div class="barras">
+    <button onclick="abrir_menu()" id="btnAbrir">☰</button>
+  </div>
+
+  <div class="desplegable" id="menu">
+    <button onclick="cerrar_menu()" id="btnCerrar">✖</button>
+    <ul class="menu">
+      <li><a href="#Inicio">Inicio</a></li>
+      <li><a href="sabores.html">Sabores</a></li>
+      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <h1>Heladería Dulce Nieve</h1>
+    <h3>El sabor más dulce de la ciudad</h3>
+
+    <section>
+      <p><strong>Historia</strong></p>
+      <p>Fundada en 1995 por la familia Herrera</p>
+      <p>Inspirada en los sabores artesanales</p>
+      <p>Ubicada en el corazón de la ciudad</p>
+      <p>Especialistas en helado natural y frappés</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <p><strong>Suseth Chavez</strong></p>
+      <p>Centro Educativo Eduardo Gamarro Valle</p>
+      <p>Dirección: Av. Helados Felices, Zona 4</p>
+      <p>dulcenieve.com</p>
+    </section> 
+    <section id="Inicio">
+        <h2>¡Bienvenido a Heladería Dulce Nieve!</h2>
+        <p>En Heladería Dulce Nieve te ofrecemos los mejores helados para digustar con toda la familia
+            </p>
+      </section>
+      
+      
+  </main>
+
+  <script>
+    function abrir_menu() {
+      document.getElementById("menu").style.transform = "translateX(0)";
+    }
+    function cerrar_menu() {
+      document.getElementById("menu").style.transform = "translateX(-100%)";
+    }
+  </script>
+
+</body>
+</html>
